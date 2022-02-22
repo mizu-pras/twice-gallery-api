@@ -136,6 +136,9 @@ app.get('/gallery/:name/:title', (req, res) => {
     
 })
 
-app.listen(8080, () => {
-    console.log('listening to 8080');
+const host = '0.0.0.0';
+const port = process.env.PORT || 3000;
+
+app.listen(port, host, () => {
+    console.log('listening to ' + port);
 })
